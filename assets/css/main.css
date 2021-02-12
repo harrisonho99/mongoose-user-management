@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+nav {
+  padding: 0 1rem;
+}
+.center-align {
+  border-radius: 0px;
+}
+.table {
+  margin-top: 4rem;
+}
+.nav-brand-text-dark {
+  font-size: 1.3rem;
+}
+.add-user-desc {
+  text-align: center;
+}
+.add-user-desc > p {
+  color: gray;
+}
+.tag {
+  display: inline-block;
+  width: 70px !important;
+}
+#site-main {
+  overflow-x: auto;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/d66833d74d.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="shortcut icon" href="/img/BlackLogo.png" type="image/x-icon">
+    <title>CRUD APP</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header id="header">
+      <nav>
+        <div class="container">
+          <div class="text-center center-align">
+            <a href="/" class="nav-brand-text-dark brand-logo"
+              >User Management System</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header -->
+    <!-- main -->
+    <main id="site-main">
+      <div class="container">
+        <div class="box-nav d-flex-justify-between">
+          <a href="/add-user" class="border-shadow btn">
+            <span class="text-gradient">
+              New User <i class="fa fa-user-circle" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+        <!-- form handling -->
+        <form action="/" method="post">
+          <table class="table center-align">
+            <thead class="thead-dark cyan lighten-4">
+              <tr>
+                <th class="center-align">ID</th>
+                <th class="center-align">Name</th>
+                <th class="center-align">Email</th>
+                <th class="center-align">Gender</th>
+                <th class="center-align">Status</th>
+                <th class="center-align">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align">1️⃣</td>
+                <td class="center-align">2️⃣</td>
+                <td class="center-align">3️⃣</td>
+                <td class="center-align">4️⃣</td>
+                <td class="center-align">5️⃣</td>
+                <td class="center-align">
+                  <a href="#" class="btn border-shadow update">
+                    <span class="text-gradient">
+                      <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn border-shadow delete">
+                    <span class="text-gradient">
+                      <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        <!-- form handling -->
+      </div>
+    </main>
+    <!-- main -->
+  </body>
+</html>

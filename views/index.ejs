@@ -1,0 +1,33 @@
+<%- include("include/_header.ejs") -%>
+<%- include("include/_show.ejs") -%>
+<tbody>
+    <% users.map(user => { %>
+    <tr>
+        <input type="hidden" value="<%= user._id %>">
+        <td class="center-align"><%= user.firstName %> </td>
+        <td class="center-align"><%= user.lastName %></td>
+        <td class="center-align"><%= user.email %> </td>
+        <td class="center-align"><%= user.gender %></td>
+        <td class="center-align"><%= user.status %></td>
+        <td class="center-align">
+            <a href="/update-user/<%= user._id %>?edit=true" class="btn border-shadow update">
+                <span>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </span>
+            </a>
+            <a href="/api/users/<%= user._id %>" class="btn border-shadow delete">
+                <span>
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                </span>
+            </a>
+        </td>
+    </tr>
+    <% }) %>
+</tbody>
+</table>
+</form>
+<!-- form handling -->
+</div>
+</main>
+<script src="/js/handleDelete.js"></script>
+<%- include("include/_footer.ejs") -%>

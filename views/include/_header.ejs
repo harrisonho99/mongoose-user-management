@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/d66833d74d.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="shortcut icon" href="/img/BlackLogo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/BlackLogo.png">
+    <link rel="manifest" href="/public/manifest.json">
+    <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">Manage User</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="waves-effect waves-light btn" href="/add-user">
+                            Add New User
+                            <i class="material-icons fa fa-plus"></i>
+                        </a></li>
+                </ul>
+                <a href="/add-user" title="Add New User"
+                    class="sidenav-trigger btn-floating btn-large halfway-fab waves-effect waves-light teal">
+                    <i class="material-icons fa fa-plus"></i></a>
+            </div>
+        </nav>
+    </header>

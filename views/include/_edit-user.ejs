@@ -1,0 +1,116 @@
+<main id="site-main">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6 add-user-desc">
+        <h2><%= title %></h2>
+        <p>Enter user in in the form.</p>
+      </div>
+      <% if (!edit) {%>
+      <div class="col s12 m6">
+        <form action="<%= action %>" method="<%= method %>">
+          <div class="input-field col s12">
+            <i class="fa fa-user material-icons prefix" aria-hidden="true"></i>
+            <input id="icon_prefix" type="text" class="validate" placeholder="First Name" name="firstName" required
+              minlength="2" />
+          </div>
+          <div class="input-field col s12">
+            <i class="fa fa-user material-icons prefix" aria-hidden="true"></i>
+            <input id="icon_prefix" class="validate" placeholder="Last Name" name="lastName" required minlength="2" />
+          </div>
+          <div class="input-field col s12">
+            <i class="fa fa-user material-icons prefix" aria-hidden="true"></i>
+            <input id="icon_prefix" type="email" class="validate" placeholder="Email" name="email" required
+              minlength="10" />
+          </div>
+          <div class="input-field col s12">
+            <div>
+              <span class="tag">
+                Gender:
+              </span>
+              <label>
+                <input type="radio" name="gender" value="male" required />
+                <span>Male</span>
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" required />
+                <span>Female</span>
+              </label>
+            </div>
+            <div>
+              <span class="tag">
+                Status:
+              </span>
+              <label>
+                <input type="radio" name="status" value="online" required />
+                <span>Online</span>
+              </label>
+              <label>
+                <input type="radio" name="status" value="offline" required />
+                <span>Offline</span>
+              </label>
+            </div>
+          </div>
+          <div class="input-field col s12 center-align">
+            <button type="submit" class="btn center">ADD USER</button>
+          </div>
+        </form>
+      </div>
+      <!-- edit mode -->
+      <% } else {%>
+      <div class="col s12 m6">
+        <form action="<%= action %>" method="<%= method %> ">
+          <div class="input-field col s12">
+            <i class="fa fa-user material-icons prefix" aria-hidden="true"></i>
+            <input value="<%= user.firstName  %>" id="icon_prefix" type="text" class="validate" placeholder="First Name"
+              required minlength="2" name="firstName" />
+          </div>
+          <div class="input-field col s12">
+            <i class="fa fa-user material-icons prefix" aria-hidden="true"></i>
+            <input value="<%= user.lastName %>" id="icon_prefix" class="validate" placeholder="Last Name" required
+              minlength="2" name="lastName" />
+          </div>
+          <div class="input-field col s12">
+            <i class="fa fa-user material-icons prefix" aria-hidden="true"></i>
+            <input value="<%= user.email %>" id="icon_prefix" type="email" class="validate" placeholder="Email" required
+              minlength="2" name="email" />
+          </div>
+          <div class="input-field col s12">
+            <div>
+              <span class="tag">
+                Gender:
+              </span>
+              <label>
+                <input type="radio" name="gender" value="male" required />
+                <span>Male</span>
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" required />
+                <span>Female</span>
+              </label>
+            </div>
+            <div>
+              <span class="tag">
+                Status:
+              </span>
+              <label>
+                <input type="radio" name="status" value="online" required />
+                <span>Online</span>
+              </label>
+              <label>
+                <input type="radio" name="status" value="offline" required />
+                <span>Offline</span>
+              </label>
+            </div>
+          </div>
+          <input type="hidden" value="<%=action%>" id="id">
+          <div class="input-field col s12 center-align">
+            <button type="submit" class="btn center">EDIT USER</button>
+          </div>
+        </form>
+        <script src="/js/handlePutForm.js" defer></script>
+      </div>
+      <% } %>
+    </div>
+  </div>
+  </div>
+</main>
